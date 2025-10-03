@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Andrew Doyle — Portfolio</title>
+<style>
+  
+  :root{
+    --pine:#004F2D;
+    --pine-2:#0E7A49;
+    --tint:#E9F5EF;
+    --text:#0f172a;
+    --muted:#46605a;
+    --border:#d7e7df;
+    --w:820px;
+    --r:14px;
+  }
+  *{box-sizing:border-box}  body{margin:0;font:16px/1.6 system-ui,Arial;color:var(--text);background:linear-gradient(#fff, var(--tint))}
+  a{color:var(--pine);text-decoration:none}
+  .wrap{max-width:var(--w);margin:0 auto;padding:0 16px}
+  header{background:var(--pine);color:#fff}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:800;letter-spacing:.3px}
+  nav a{color:#e8fff3;opacity:.9;margin-left:12px} nav a:hover{opacity:1}
+  .hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:36px 0}
+  h1{margin:0 0 .4rem;font-size:clamp(1.8rem,4vw,2.4rem);color:var(--pine)}
+  .muted{color:var(--muted)}
+  .btn{display:inline-block;padding:.6rem .9rem;border-radius:12px;background:var(--pine);color:#fff;border:1px solid var(--pine)}
+  .btn.alt{background:transparent;color:var(--pine);border:1px solid var(--pine)}
+  .avatar{width:150px;aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:6px solid #fff;outline:2px solid var(--pine-2);box-shadow:0 6px 18px rgba(0,0,0,.08)}
+  .card{border:1px solid var(--border);border-radius:var(--r);padding:14px;background:#fff}
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  footer{margin-top:28px;padding:22px 0;text-align:center;background:var(--pine);color:#eafff4}
+  @media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center;justify-items:center}}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <div class="brand">Andrew Doyle</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Hello, I’m Andrew Doyle.</h1>
+        <p class="muted">Computer programming student</p>
+        <p>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn alt" href="YOUR_RESUME.pdf" target="_blank" rel="noopener">Resume</a>
+        </p>
+      </div>
+      
+      <img class="avatar" src="me.jpg.png" alt="my-portfolio/me.jpg.png" />
+    </section>
+
+    <section id="about">
+      <div class="card">
+        <p><strong>About:</strong> I am a beginner computer programming student learning and creating new projects.</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 style="color:var(--pine)">Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>PROJECT NAME</h3>
+          <p class="muted">NA. links below for future projects.</p>
+          <p><a href="https://YOUR_DEMO" target="_blank" rel="noopener">Live</a> ·
+             <a href="https://github.com/YOUR_HANDLE/REPO" target="_blank" rel="noopener">Code</a></p>
+        </article>
+        
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 style="color:var(--pine)">Contact</h2>
+      <div class="card">
+        <p class="muted">Email: <a href="mailto:YOUR_EMAIL@example.com">andrew03doyle@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> ANDREW DOYLE</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
